@@ -3,7 +3,7 @@ FROM oven/bun:1 AS base
 WORKDIR /app
 
 # Copiamos solo los archivos de dependencias para aprovechar la cache
-COPY package.json bun.lockb ./
+COPY package.json bun.lock ./
 
 # Instalación de dependencias de producción
 FROM base AS prod-deps
